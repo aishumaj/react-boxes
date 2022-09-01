@@ -1,4 +1,4 @@
-inport BoxList from './BoxList'
+import BoxList from './BoxList'
 import './App.css';
 
 function App() {

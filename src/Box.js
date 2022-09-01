@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid';
+import React from "react";
 
 /** Creates a box with a background color, width, and height
  * 
@@ -12,18 +12,19 @@ import { v4 as uuid } from 'uuid';
  * States
  * -none
  * 
- * App -> BoxList -> NewBoxForm, Box
+ * App -> BoxList -> Box
  * 
  */
 
-function Box({backgroundColor, width, height, remove, id}){
+function Box({backgroundColor="grey", width="50", height="50", remove, id}){
   const myStyles = {
     backgroundColor: backgroundColor,
     width: width+'px',
     height: height+'px'
   }
   
-  function handleDelete(evt){
+  /** Delete a box on button click */
+  function handleDelete(){
     remove(id);
   }
   
